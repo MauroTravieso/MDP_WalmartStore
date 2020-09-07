@@ -121,9 +121,7 @@
                 android:background="#48B0F6"
                 android:text="Create Account"
                 android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                 />
-<!--            android:onClick="createNewAccount"-->
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
