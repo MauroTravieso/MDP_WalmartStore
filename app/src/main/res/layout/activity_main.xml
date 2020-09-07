@@ -82,7 +82,8 @@
                 android:text="Forgot password?"
                 android:textSize="10dp"
                 android:autoLink="all"
-                android:clickable="true"/>
+                android:clickable="true"
+                android:onClick="forgotPassword"/>
         </LinearLayout>
 
         <LinearLayout
@@ -128,13 +129,6 @@
                 android:onClick="createUser"/>
         </LinearLayout>
 
-<!--        <include-->
-<!--            android:id="@+id/create_account"-->
-<!--            android:visibility="gone"-->
-<!--            layout="@layout/create_account"/>-->
-
     </androidx.cardview.widget.CardView>
-
-
 
 </RelativeLayout>

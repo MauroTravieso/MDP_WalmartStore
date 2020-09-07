@@ -2,6 +2,7 @@ package com.example.walmartstore
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -92,6 +93,24 @@ class MainActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 val new_user = data!!.getSerializableExtra("new_user")
                 users.add(new_user as User)
+            }
+        }
+    }
+
+    fun forgotPassword(view : View) {
+        val eml = email.text.toString()
+        Toast.makeText(this, "Forgot password?", Toast.LENGTH_LONG).show()
+        for (user in users) {
+            if (eml.equals(user.username)) {
+                val fpass =  user.password
+                // Implicit intent
+                val intent = Intent()
+                intent.action = Intent.ACTION_SEND
+                intent.type = "text/plain"
+                intent.putExtra(Intent.EXTRA_TEXT, fpass)
+                if (intent.resolveActivity(getPackageManager())!=null) {
+                    startActivity(intent)
+                }
             }
         }
     }
