@@ -18,14 +18,14 @@
             android:id="@+id/ivProductImage"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            app:srcCompat="@drawable/espresso" />
+            app:srcCompat="@drawable/electronics" />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Coffe"
+            android:text="Electronics"
             android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>
