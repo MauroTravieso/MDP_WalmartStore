@@ -60,18 +60,40 @@ class ShoppingActivity : AppCompatActivity() {
             // Inflate your own layout into your adapter
             var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             var productView= inflator.inflate(R.layout.shopping_ticket,null)
+            //var productView= inflator.inflate(R.layout.clothing_list,null)
 
             // Set the items on your own layout view
             productView.ivProductImage.setImageResource(product.image!!)
 
             productView.ivProductImage.setOnClickListener {
 
+                // Clothing ListView
+                if ( getItemId(p0)== 1L) {
+                    var tstinv = Toast.makeText(context, product.name, Toast.LENGTH_SHORT)
+                    tstinv.setGravity(Gravity.TOP,0,0)
+                    tstinv.show()
+
+
+                    // Intent to Shopping Details
+                    val intent = Intent(context, ClothingList::class.java)
+                    context!!.startActivity(intent)
+
+                }
+
+                // Electronics RecyclerListView
+                if (getItemId(p0)==0L) {
+                    // Intent to Shopping Details
+                    val intent = Intent(context, ElectronicsList::class.java)
+                    context!!.startActivity(intent)
+                }
+
                 // Toast message
                 var tstinv = Toast.makeText(context, product.name, Toast.LENGTH_LONG)
                 tstinv.setGravity(Gravity.TOP,0,0)
                 tstinv.show()
 
-                val intent = Intent(context,ShoppingDetails::class.java)
+                // Intent to Shopping Details
+                val intent = Intent(context, ShoppingDetails::class.java)
                 intent.putExtra("name",product.name!!)
                 intent.putExtra("des",product.des!!)
                 intent.putExtra("image",product.image!!)

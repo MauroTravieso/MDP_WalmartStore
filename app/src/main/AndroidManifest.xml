@@ -19,6 +19,10 @@
         <activity android:name=".ShoppingActivity"/>
         <activity android:name=".ShoppingDetails"/>
         <activity android:name=".CreateAccount"/>
+        <activity android:name=".ClothingList"/>
+        <activity android:name=".ElectronicsList"/>
+        <activity android:name=".DetailActivity"/>
+
     </application>
 
 </manifest>

@@ -10,11 +10,13 @@ class ShoppingDetails : AppCompatActivity() {
         setContentView(R.layout.shopping_details)
         val bundle=intent.extras
 
-        // Toast message
-
-
+        // Showing product icon and description page
         ivProductImage.setImageResource(bundle!!.getInt("image"))
         tvName.text = bundle!!.getString("name")
         tvDetails.text = bundle!!.getString("des")
+
+        //List View
+
+
     }
 }

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:padding="20dp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="12dp">
+    <!--    app:cardBackgroundColor="#e4b9f1"-->
+
+    <RelativeLayout
+        android:id="@+id/playout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/border"
+        android:padding="12dp">
+
+        <!--        <com.mikhaellopez.circularimageview.CircularImageView-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="270dp"
+            android:layout_height="26dp"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginBottom="40dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="Price: $"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="270dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginBottom="40dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="TextView"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="Color:"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="270dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="TextView"
+            android:textColor="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
